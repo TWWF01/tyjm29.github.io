@@ -180,7 +180,7 @@
                     alert('请输入正确的手机号');
                     return
                 }
-                const url = `http://api.sqhyw.net:90/api/get_mobile?token=${this.token}&project_id=${id}&phone_num=${this.phone}`;
+                const url = `https://api.sqhyw.net:90/api/get_mobile?token=${this.token}&project_id=${id}&phone_num=${this.phone}`;
                 try {
                     const response = await axios.get(url);
                     const data = response.data;
@@ -202,7 +202,7 @@
                     console.error('获取手机号码失败2:', error);
                 }
                     let num = 60;
-                    const url1 = `http://api.sqhyw.net:90/api/get_message?token=${this.token}&project_id=${id}&phone_num=${this.phone}`;
+                    const url1 = `https://api.sqhyw.net:90/api/get_message?token=${this.token}&project_id=${id}&phone_num=${this.phone}`;
                     // console.log(url1);
                     let response1 = await axios.get(url1);
                     let da = response1.data;
